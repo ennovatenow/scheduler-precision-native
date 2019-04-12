@@ -4,10 +4,11 @@
 CHANNEL="SCHEDULED-JOB"
 
 #Name of the Job
-JOB_NAME="simple-demo-job"
+JOB_NAME="submodules-git"
 
 #Location of the PRECISION100 framework installtion: 
-export PRECISION100_FOLDER=/home/dell/pcs100/precision-100-framework
+#This must be an absolute path - not a relative one.
+export PRECISION100_FOLDER=$(pwd)/precision100
 
 #Root folder where all the artifacts related to a execution are located.
 export PRECISION100_PROJECT_FOLDER=/home/dell/precision105

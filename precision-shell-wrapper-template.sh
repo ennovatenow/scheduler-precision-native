@@ -7,7 +7,7 @@ CHANNEL="SCHEDULED-JOB"
 JOB_NAME=
 
 #Location of the PRECISION100 framework installtion: 
-export PRECISION100_FOLDER=
+export PRECISION100_FOLDER=$(pwd)/precision100
 
 #Root folder where all the artifacts related to an execution are to be located.
 #The project will be copied to this folder and executed.
