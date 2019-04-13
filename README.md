@@ -4,6 +4,7 @@ A simple single file shell interface to the Precision100 framework
 ## Quick Usage
 ```
 git clone --recurse-submodules git@github.com:ennovatenow/scheduler-precision-native.git
+cd scheduler-precision-native
 ./precision-shell-wrapper-sample.sh
 ```
 
