@@ -16,7 +16,7 @@ export PRECISION100_PROJECT_FOLDER=
 
 #The type of the repository to be used for the migration templates
 #Supported values are GIT | FILE. Default[GIT] :
-export PRECISION100_PROJECT_REPO_TYPE=FILE
+export PRECISION100_PROJECT_REPO_TYPE=
 
 #URL of the repository for migration templates.
 #URL format must match the Repository type chosen above.
@@ -28,6 +28,9 @@ export PRECISION100_PROJECT_REPO_URL=
 #e.g. simple-demo 
 #or   mixed-essence-eq3
 export PRECISION100_PROJECT_NAME=
+
+#Dataflow of the project that needs to be executed
+DATAFLOW=
 
 #Project conf folder, by default this is PRECIION100_PROJECT_FOLDER/conf
 export PRECISION100_PROJECT_CONF_FOLDER="$PRECISION100_PROJECT_FOLDER/conf"
@@ -47,9 +50,6 @@ export SIMULATION_SLEEP=1
 #The name must be unique per execution
 #This can be job name with the instance 
 PRECISION100_EXECUTION_NAME="$(date +%F-%H-%M-%S)-${JOB_NAME}"
-
-#Dataflow of the project that needs to be executed
-DATAFLOW=
 
 if [ ! -d "${PRECISION100_PROJECT_CONF_FOLDER}" ]; then
   mkdir -p "${PRECISION100_PROJECT_CONF_FOLDER}"

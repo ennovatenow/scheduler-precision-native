@@ -4,26 +4,29 @@
 CHANNEL="SCHEDULED-JOB"
 
 #Name of the Job
-JOB_NAME="submodules-git"
+JOB_NAME="quick-demo"
 
 #Location of the PRECISION100 framework installtion: 
 #This must be an absolute path - not a relative one.
 export PRECISION100_FOLDER=$(pwd)/precision100
 
 #Root folder where all the artifacts related to a execution are located.
-export PRECISION100_PROJECT_FOLDER=/home/dell/precision105
+export PRECISION100_PROJECT_FOLDER=$HOME/precision100
 
 #The type of the repository to be used for the migration templates
 #Supported values are GIT | FILE. Default[GIT] :
-export PRECISION100_PROJECT_REPO_TYPE=FILE
+export PRECISION100_PROJECT_REPO_TYPE=GIT
 
 #URL of the repository for migration templates.
 #URL format must match the Repository type chosen above.
 #e.g. PRECISION100_PROJECT_REPO_URL="git@github.com:ennovatenow/precision-100-migration-templates.git"
-export PRECISION100_PROJECT_REPO_URL=/home/dell/migration-templates/precision-100-migration-templates
+export PRECISION100_PROJECT_REPO_URL="git@github.com:ennovatenow/precision-100-migration-templates.git"
 
 #Project Name of the migration template to be used.
 export PRECISION100_PROJECT_NAME=simple-demo
+
+#Dataflow of the project that needs to be executed
+DATAFLOW=dataflow-one
 
 #Project conf folder, by default this is PRECIION100_PROJECT_FOLDER/conf
 export PRECISION100_PROJECT_CONF_FOLDER="$PRECISION100_PROJECT_FOLDER/conf"
@@ -35,12 +38,10 @@ export PRECISION100_PROJECT_CONNECTION_FILE="$PRECISION100_PROJECT_CONF_FOLDER/.
 #Name of the default connection, to be used when connection name is not explicitly provided.
 export PRECISION100_PROJECT_DEFAULT_CONNECTION="PRECISION100_CONNECTION"
 
-export PRECISION100_PROJECT_OPERATION_MODE="PROD"
+export PRECISION100_PROJECT_OPERATION_MODE="DEV"
 export SIMULATION_MODE="FALSE"
 export SIMULATION_SLEEP=1
 
-#Dataflow of the project that needs to be executed
-DATAFLOW=dataflow-one
 
 if [ ! -d "${PRECISION100_PROJECT_CONF_FOLDER}" ]; then
   mkdir -p "${PRECISION100_PROJECT_CONF_FOLDER}"
